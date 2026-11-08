@@ -1,0 +1,30 @@
+{
+	"contract": "module-manifest.v1",
+	"id": "insights",
+	"name": "Dashboards",
+	"description": "Frappe Insights on the client's ERPNext site: visual query builder, charts and shared dashboards over the client's own ERPNext data.",
+	"scope": "core",
+	"product": "back-office",
+	"frappeApp": "insights",
+	"enable": {
+		"perCompany": true,
+		"method": "GET",
+		"path": "/insights"
+	},
+	"probe": {
+		"perCompany": true,
+		"method": "GET",
+		"path": "/.well-known/nuculture-build/insights.json"
+	},
+	"peopleRoles": {
+		"Owner": [
+			"Insights Admin"
+		],
+		"Manager": [
+			"Insights User"
+		],
+		"Bookkeeper": [
+			"Insights User"
+		]
+	}
+}
